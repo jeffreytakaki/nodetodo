@@ -5,11 +5,11 @@ var config = require('./config');
 var setupController = require('./controllers/setupController');
 var apiController = require('./controllers/apiController');
 
-app.set('port', (process.env.PORT || 5000));
+var port = process.env.PORT || 5000;
 
 app.use('/', express.static(__dirname + '/public'));
 app.get('/', function(req, res) {
-    res.send('/index')
+    res.send('hello')
 })
 app.set('view engine','ejs');
 
