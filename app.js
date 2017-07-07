@@ -9,7 +9,7 @@ app.set('port', (process.env.PORT || 5000));
 
 app.use('/', express.static(__dirname + '/public'));
 app.get('/', function(req, res) {
-    res.send('hello')
+    res.send('/index')
 })
 app.set('view engine','ejs');
 
